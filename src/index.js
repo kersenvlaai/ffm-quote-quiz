@@ -17,22 +17,31 @@ const client = new Client({
 
 const rest = new REST({ version: "10" }).setToken(TOKEN);
 
+const quotes = [
+  `"Je maakt me geil maar je laat me niet komen." - Ying`,
+  `"Zobiezo" - Ying`,
+  `"Paneer me schatje." - Marijn`,
+  `"92, beste bouwjaar." - Martijn`,
+  `"Het liefst slaap ik voor eeuwig."  - Sonny`,
+];
+
+const random = (max) => Math.floor(Math.random() * max);
+
 client.on("ready", () => {
   console.log(`${client.user.username} is online!`);
 });
 
 client.on("interactionCreate", (interaction) => {
   if (interaction.isChatInputCommand()) {
-    console.log("hello world");
-    interaction.reply({ content: "Hey there!!!!" });
+    interaction.reply({ content: `${quotes[random(quotes.length)]}` });
   }
 });
 
 async function main() {
   const commands = [
     {
-      name: "order",
-      description: "Order something...",
+      name: "quote",
+      description: "Get a random FFM quote",
     },
   ];
 
