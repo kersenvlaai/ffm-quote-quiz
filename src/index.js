@@ -21,11 +21,18 @@ client.on("ready", () => {
   console.log(`${client.user.username} is online!`);
 });
 
+client.on("interactionCreate", (interaction) => {
+  if (interaction.isChatInputCommand()) {
+    console.log("hello world");
+    interaction.reply({ content: "Hey there!!!!" });
+  }
+});
+
 async function main() {
   const commands = [
     {
-      name: "tutorialHelp",
-      description: "Tutorial Help Description",
+      name: "order",
+      description: "Order something...",
     },
   ];
 
@@ -35,8 +42,8 @@ async function main() {
       body: commands,
     });
     client.login(TOKEN);
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.log(err);
   }
 }
 
