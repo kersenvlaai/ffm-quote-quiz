@@ -23,6 +23,11 @@ const quotes = [
   `"Paneer me schatje." - Marijn`,
   `"92, beste bouwjaar." - Martijn`,
   `"Het liefst slaap ik voor eeuwig."  - Sonny`,
+  `"Ik voelde me gister niet zo lekker dus toen nam ik maccie."  - Ying`,
+  `"Wodihh mattie dat is kaolo ver." - Ying`,
+  `"Hoeren!!" - Kara`,
+  `"Hoe dieper de neus hoe beter de sniff." - Ying`,
+  `"Om mijzelf te dwingen meer geld te verdienen, besloot ik meer uit te geven." - Ying`,
 ];
 
 const random = (max) => Math.floor(Math.random() * max);
