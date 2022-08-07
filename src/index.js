@@ -54,6 +54,24 @@ async function main() {
           description: "Get a random quote from the name you input",
           type: 3,
           required: false,
+          choices: [
+            {
+              name: "Marijn",
+              value: "Martijn",
+            },
+            {
+              name: "Martijn",
+              value: "Martijn",
+            },
+            {
+              name: "Ying",
+              value: "Ying",
+            },
+            {
+              name: "Sonny",
+              value: "Sonny",
+            },
+          ],
         },
       ],
     },
