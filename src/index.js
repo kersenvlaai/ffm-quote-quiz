@@ -39,6 +39,7 @@ client.on("ready", () => {
 client.on("interactionCreate", (interaction) => {
   if (interaction.isChatInputCommand()) {
     interaction.reply({ content: `${quotes[random(quotes.length)]}` });
+    console.log(interaction.options.get("name").value);
   }
 });
 
@@ -47,6 +48,14 @@ async function main() {
     {
       name: "quote",
       description: "Get a random FFM quote",
+      options: [
+        {
+          name: "name",
+          description: "Get a random quote from the name you input",
+          type: 3,
+          required: false,
+        },
+      ],
     },
   ];
 
