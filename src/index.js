@@ -17,6 +17,40 @@ const client = new Client({
 
 const rest = new REST({ version: "10" }).setToken(TOKEN);
 
+// const names = [
+//   "Coen",
+//   "Ian",
+//   "Jeroen",
+//   "Kara",
+//   "Leander",
+//   "Lieke",
+//   "Luuk",
+//   "Marijn",
+//   "Martijn",
+//   "Sonny",
+//   "Tom",
+//   "Ying",
+// ];
+
+const sonny = [
+  "Het liefst slaap ik voor eeuwig.",
+  "Ik heb twee nieuwe snijplanken.",
+  "Ik heb maar 3 uur slaap gehad.",
+  "Vuile dipshits.",
+  "Wie?",
+  "Wat gaan jullie vandaag eten? Aardappels, vlees en groente?",
+  "Ewa niffo, ik moet ff een jonko klappe.",
+  "Het regent niet, dat zijn mijn tranen.",
+  "Als het sneeuw moet ik altijd even sneeuw op mijn dak gooien voordat de politie langsvliegt in een heli.",
+  "Ik was er al klaar voor in '92. En ik ben geboren in '93.",
+  "Na jou.",
+  "Ik wil dood.",
+  "Het is geen racisme als je ze niet als een ras ziet.",
+  "Enige afval wat hij maakt is CO2",
+  "Ben je een visionair of een vis?",
+  "Ik ga fucking veel drinken. 4 biertjes.",
+];
+
 const quotes = [
   `"Je maakt me geil maar je laat me niet komen." - Ying`,
   `"Zobiezo" - Ying`,
