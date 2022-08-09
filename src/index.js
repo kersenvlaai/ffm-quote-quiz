@@ -7,6 +7,8 @@ const TOKEN = process.env.BOT_TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
 
+let inputName;
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -72,8 +74,15 @@ client.on("ready", () => {
 
 client.on("interactionCreate", (interaction) => {
   if (interaction.isChatInputCommand()) {
-    interaction.reply({ content: `${quotes[random(quotes.length)]}` });
-    console.log(interaction.options.get("name").value);
+    inputName = interaction.options.get("name").value.toLowerCase();
+    switch (inputName) {
+      case inputName == sonny:
+        interaction.reply({ content: `${sonny[random(sonny.length)]}` });
+        break;
+      // case inputName == martijn:
+      //   interaction.reply({ content: `${martijn[random(martijn.length)]}` });
+      //   break;
+    }
   }
 });
 
