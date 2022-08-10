@@ -19,21 +19,6 @@ const client = new Client({
 
 const rest = new REST({ version: "10" }).setToken(TOKEN);
 
-// const names = [
-//   "Coen",
-//   "Ian",
-//   "Jeroen",
-//   "Kara",
-//   "Leander",
-//   "Lieke",
-//   "Luuk",
-//   "Marijn",
-//   "Martijn",
-//   "Sonny",
-//   "Tom",
-//   "Ying",
-// ];
-
 const sonny = [
   "Het liefst slaap ik voor eeuwig.",
   "Ik heb twee nieuwe snijplanken.",
@@ -53,20 +38,10 @@ const sonny = [
   "Ik ga fucking veel drinken. 4 biertjes.",
 ];
 
-const quotes = [
-  `"Je maakt me geil maar je laat me niet komen." - Ying`,
-  `"Zobiezo" - Ying`,
-  `"Paneer me schatje." - Marijn`,
-  `"92, beste bouwjaar." - Martijn`,
-  `"Het liefst slaap ik voor eeuwig."  - Sonny`,
-  `"Ik voelde me gister niet zo lekker dus toen nam ik maccie."  - Ying`,
-  `"Wodihh mattie dat is kaolo ver." - Ying`,
-  `"Hoeren!!" - Kara`,
-  `"Hoe dieper de neus hoe beter de sniff." - Ying`,
-  `"Om mijzelf te dwingen meer geld te verdienen, besloot ik meer uit te geven." - Ying`,
-];
-
 const random = (max) => Math.floor(Math.random() * max);
+
+const capFirstLetter = (string) =>
+  string.charAt(0).toUpperCase() + string.slice(1);
 
 client.on("ready", () => {
   console.log(`${client.user.username} is online!`);
@@ -76,10 +51,14 @@ client.on("interactionCreate", (interaction) => {
   if (interaction.isChatInputCommand()) {
     inputName = interaction.options.get("name").value.toLowerCase();
     switch (inputName) {
-      case inputName == sonny:
-        interaction.reply({ content: `${sonny[random(sonny.length)]}` });
+      case (inputName = "sonny"):
+        interaction.reply({
+          content: `"${sonny[random(sonny.length)]}" - ${capFirstLetter(
+            inputName
+          )}`,
+        });
         break;
-      // case inputName == martijn:
+      // case (inputName = "martijn"):
       //   interaction.reply({ content: `${martijn[random(martijn.length)]}` });
       //   break;
     }
