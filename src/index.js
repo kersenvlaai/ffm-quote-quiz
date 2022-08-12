@@ -4,6 +4,8 @@ import { REST } from "@discordjs/rest";
 
 import * as quotes from "../constants/quotes.js";
 import { commands } from "../constants/commands.js";
+import { random } from "../helpers/randomNum.js";
+import { capFirstLetter } from "../helpers/capFirstLetter.js";
 
 config();
 const TOKEN = process.env.BOT_TOKEN;
@@ -21,11 +23,6 @@ const client = new Client({
 });
 
 const rest = new REST({ version: "10" }).setToken(TOKEN);
-
-const random = (max) => Math.floor(Math.random() * max);
-
-const capFirstLetter = (string) =>
-  string.charAt(0).toUpperCase() + string.slice(1);
 
 client.on("ready", () => {
   console.log(`${client.user.username} is online!`);
@@ -59,7 +56,7 @@ client.on("interactionCreate", (interaction) => {
       case (inputName = "kara"):
         interaction.reply({
           content: `"${
-            quotes.kara[random(kquotes.ara.length)]
+            quotes.kara[random(quotes.kara.length)]
           }" - ${capFirstLetter(inputName)}`,
         });
         break;
