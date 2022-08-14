@@ -164,4 +164,5 @@ export const ying = [
   "Dit lichaam is te lekker om single te zijn.",
   "Ik ben dual wielder (tijdens het fappen), ligt eraan in welke hand ik kramp heb.",
   "Kara en Lieke zijn mannen met tieten.",
+  "De gescheurde billetjes geven genoeg lube.",
 ];
