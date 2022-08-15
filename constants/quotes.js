@@ -124,6 +124,7 @@ export const sonny = [
   "Enige afval wat hij maakt is CO2",
   "Ben je een visionair of een vis?",
   "Ik ga fucking veel drinken. 4 biertjes.",
+  "Zonder ING geen sufferING",
 ];
 
 export const tom = [
