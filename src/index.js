@@ -119,6 +119,11 @@ client.on("interactionCreate", (interaction) => {
           break;
       }
     }
+    if (interaction.commandName === "verlossing") {
+      interaction.reply({
+        content: `work in progress`,
+      });
+    }
   }
 });
 
