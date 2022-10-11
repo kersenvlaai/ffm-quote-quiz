@@ -12,5 +12,5 @@ export const martijnVerlossing = differenceInHours(
 
 export const marijnVerlossing = differenceInHours(
   new Date(),
-  new Date(2023, 08, 15)
+  new Date(2023, 8, 15)
 );
