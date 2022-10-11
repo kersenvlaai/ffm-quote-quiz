@@ -30,92 +30,94 @@ client.on("ready", () => {
 
 client.on("interactionCreate", (interaction) => {
   if (interaction.isChatInputCommand()) {
-    inputName = interaction.options.get("name").value.toLowerCase();
-    switch (inputName) {
-      case (inputName = "coen"):
-        interaction.reply({
-          content: `"${
-            quotes.coen[random(quotes.coen.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "ian"):
-        interaction.reply({
-          content: `"${
-            quotes.ian[random(quotes.ian.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "jeroen"):
-        interaction.reply({
-          content: `"${
-            quotes.jeroen[random(quotes.jeroen.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "kara"):
-        interaction.reply({
-          content: `"${
-            quotes.kara[random(quotes.kara.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "leander"):
-        interaction.reply({
-          content: `"${
-            quotes.leander[random(quotes.leander.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "lieke"):
-        interaction.reply({
-          content: `"${
-            quotes.lieke[random(quotes.lieke.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "luuk"):
-        interaction.reply({
-          content: `"${
-            quotes.luuk[random(quotes.luuk.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "marijn"):
-        interaction.reply({
-          content: `"${
-            quotes.marijn[random(quotes.marijn.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "martijn"):
-        interaction.reply({
-          content: `"${
-            quotes.martijn[random(quotes.martijn.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "sonny"):
-        interaction.reply({
-          content: `"${
-            quotes.sonny[random(quotes.sonny.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "tom"):
-        interaction.reply({
-          content: `"${
-            quotes.tom[random(quotes.tom.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
-      case (inputName = "ying"):
-        interaction.reply({
-          content: `"${
-            quotes.ying[random(quotes.ying.length)]
-          }" - ${capFirstLetter(inputName)}`,
-        });
-        break;
+    if (interaction.commandName === "quote") {
+      inputName = interaction.options.get("name").value.toLowerCase();
+      switch (inputName) {
+        case (inputName = "coen"):
+          interaction.reply({
+            content: `"${
+              quotes.coen[random(quotes.coen.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "ian"):
+          interaction.reply({
+            content: `"${
+              quotes.ian[random(quotes.ian.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "jeroen"):
+          interaction.reply({
+            content: `"${
+              quotes.jeroen[random(quotes.jeroen.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "kara"):
+          interaction.reply({
+            content: `"${
+              quotes.kara[random(quotes.kara.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "leander"):
+          interaction.reply({
+            content: `"${
+              quotes.leander[random(quotes.leander.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "lieke"):
+          interaction.reply({
+            content: `"${
+              quotes.lieke[random(quotes.lieke.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "luuk"):
+          interaction.reply({
+            content: `"${
+              quotes.luuk[random(quotes.luuk.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "marijn"):
+          interaction.reply({
+            content: `"${
+              quotes.marijn[random(quotes.marijn.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "martijn"):
+          interaction.reply({
+            content: `"${
+              quotes.martijn[random(quotes.martijn.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "sonny"):
+          interaction.reply({
+            content: `"${
+              quotes.sonny[random(quotes.sonny.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "tom"):
+          interaction.reply({
+            content: `"${
+              quotes.tom[random(quotes.tom.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+        case (inputName = "ying"):
+          interaction.reply({
+            content: `"${
+              quotes.ying[random(quotes.ying.length)]
+            }" - ${capFirstLetter(inputName)}`,
+          });
+          break;
+      }
     }
   }
 });
