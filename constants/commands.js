@@ -61,4 +61,8 @@ export const commands = [
       },
     ],
   },
+  {
+    name: "verlossing",
+    description: "gun die kaolo timer",
+  },
 ];
