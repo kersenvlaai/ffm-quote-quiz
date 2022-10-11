@@ -64,5 +64,27 @@ export const commands = [
   {
     name: "verlossing",
     description: "gun die kaolo timer",
+    options: [
+      {
+        name: "name",
+        description: "hoeveel uur nog over voor die deze dat persoon",
+        type: 3,
+        required: true,
+        choices: [
+          {
+            name: "Sonny",
+            value: "Sonny",
+          },
+          {
+            name: "Martijn",
+            value: "Martijn",
+          },
+          {
+            name: "Marijn",
+            value: "Marijn",
+          },
+        ],
+      },
+    ],
   },
 ];
