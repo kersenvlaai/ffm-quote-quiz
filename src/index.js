@@ -138,14 +138,14 @@ client.on("interactionCreate", (interaction) => {
           interaction.reply({
             content: `Hou vol ${capFirstLetter(
               inputName
-            )}, nog ${martijnVerlossing}`,
+            )}, nog ${martijnVerlossing} uren`,
           });
           break;
         case (inputName = "marijn"):
           interaction.reply({
             content: `Hou vol ${capFirstLetter(
               inputName
-            )}, nog ${marijnVerlossing}`,
+            )}, nog ${marijnVerlossing} uren`,
           });
           break;
       }
