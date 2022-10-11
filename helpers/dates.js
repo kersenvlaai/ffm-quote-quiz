@@ -7,7 +7,7 @@ export const sonnyVerlossing = differenceInHours(
 
 export const martijnVerlossing = differenceInHours(
   new Date(),
-  new Date(2022, 12, 09)
+  new Date(2022, 12, 9)
 );
 
 export const marijnVerlossing = differenceInHours(
