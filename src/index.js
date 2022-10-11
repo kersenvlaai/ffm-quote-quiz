@@ -5,7 +5,11 @@ import { REST } from "@discordjs/rest";
 import * as quotes from "../constants/quotes.js";
 import { commands } from "../constants/commands.js";
 import { random } from "../helpers/randomNum.js";
-import { sonny } from "../helpers/dates.js";
+import {
+  sonnyVerlossing,
+  martijnVerlossing,
+  marijnVerlossing,
+} from "../helpers/dates.js";
 import { capFirstLetter } from "../helpers/capFirstLetter.js";
 
 config();
@@ -125,12 +129,23 @@ client.on("interactionCreate", (interaction) => {
       switch (inputName) {
         case (inputName = "sonny"):
           interaction.reply({
-            content: `Nog "${sonny} uren`,
+            content: `Hou vol ${capFirstLetter(
+              inputName
+            )}: Nog ${sonnyVerlossing} uren`,
           });
           break;
         case (inputName = "martijn"):
           interaction.reply({
-            content: `"${sonny}`,
+            content: `Hou vol ${capFirstLetter(
+              inputName
+            )}, nog ${martijnVerlossing}`,
+          });
+          break;
+        case (inputName = "marijn"):
+          interaction.reply({
+            content: `Hou vol ${capFirstLetter(
+              inputName
+            )}, nog ${marijnVerlossing}`,
           });
           break;
       }
