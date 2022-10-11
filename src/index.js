@@ -5,6 +5,7 @@ import { REST } from "@discordjs/rest";
 import * as quotes from "../constants/quotes.js";
 import { commands } from "../constants/commands.js";
 import { random } from "../helpers/randomNum.js";
+import { sonny } from "../helpers/dates.js";
 import { capFirstLetter } from "../helpers/capFirstLetter.js";
 
 config();
@@ -118,10 +119,21 @@ client.on("interactionCreate", (interaction) => {
           });
           break;
       }
-    } else if (interaction.commandName === "verlossing") {
-      interaction.reply({
-        content: `work in progress`,
-      });
+    }
+    if (interaction.commandName === "verlossing") {
+      inputName = interaction.options.get("name").value.toLowerCase();
+      switch (inputName) {
+        case (inputName = "sonny"):
+          interaction.reply({
+            content: `Nog "${sonny} uren`,
+          });
+          break;
+        case (inputName = "martijn"):
+          interaction.reply({
+            content: `"${sonny}`,
+          });
+          break;
+      }
     }
   }
 });
