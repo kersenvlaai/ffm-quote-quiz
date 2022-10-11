@@ -1,8 +1,8 @@
 import { differenceInHours } from "date-fns";
 
 export const sonnyVerlossing = differenceInHours(
-  new Date(),
-  new Date(2022, 12, 31)
+  new Date(2022, 12, 31),
+  new Date()
 );
 
 export const martijnVerlossing = differenceInHours(
