@@ -83,6 +83,10 @@ export const commands = [
             name: "Marijn",
             value: "Marijn",
           },
+          {
+            name: "now",
+            value: "now",
+          },
         ],
       },
     ],
