@@ -148,6 +148,11 @@ client.on("interactionCreate", (interaction) => {
             )}, nog ${marijnVerlossing} uren`,
           });
           break;
+        case (inputName = "now"):
+          interaction.reply({
+            content: `${new Date()}`,
+          });
+          break;
       }
     }
   }
