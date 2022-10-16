@@ -5,7 +5,7 @@ const today = new Date();
 
 export const sonnyVerlossing = differenceInHours(
   new Date(2022, 12, 31, 0, 0),
-  today
+  new Date(2022, 10, 16, 21, 19)
 );
 
 export const martijnVerlossing = differenceInHours(
@@ -18,11 +18,7 @@ export const marijnVerlossing = differenceInHours(
   today
 );
 
-// console.log(sonnyVerlossing);
-
 export const result = differenceInHours(
   new Date(2014, 6, 2, 19, 0),
   new Date(2014, 6, 2, 6, 50)
 );
-
-console.log("result example: ", result);
