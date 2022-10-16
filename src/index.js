@@ -9,7 +9,6 @@ import {
   sonnyVerlossing,
   martijnVerlossing,
   marijnVerlossing,
-  result,
 } from "../helpers/dates.js";
 import { capFirstLetter } from "../helpers/capFirstLetter.js";
 

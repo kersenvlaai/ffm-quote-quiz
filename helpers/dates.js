@@ -1,6 +1,6 @@
-import { differenceInHours } from "date-fns";
+import { differenceInHours, addDays } from "date-fns";
 
-const startDate = new Date();
+const startDate = addDays(new Date(), 31);
 const sonnyEndDate = new Date(2022, 12, 31);
 const martijnEndDate = new Date(2022, 12, 9);
 const marijnEndDate = new Date(2023, 8, 15);
