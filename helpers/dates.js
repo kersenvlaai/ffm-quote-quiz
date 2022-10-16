@@ -1,11 +1,11 @@
-import { differenceInHours } from "date-fns";
+import { differenceInHours, addDays } from "date-fns";
 // import { DateTime } from "luxon";
 
-const today = new Date();
+const today = addDays(new Date(), 31);
 
 export const sonnyVerlossing = differenceInHours(
   new Date(2022, 12, 31, 0, 0),
-  new Date(2022, 10, 16, 21, 19)
+  today
 );
 
 export const martijnVerlossing = differenceInHours(
@@ -18,7 +18,4 @@ export const marijnVerlossing = differenceInHours(
   today
 );
 
-export const result = differenceInHours(
-  new Date(2014, 6, 2, 19, 0),
-  new Date(2014, 6, 2, 6, 50)
-);
+export const result = differenceInHours(new Date());
