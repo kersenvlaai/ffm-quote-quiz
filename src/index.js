@@ -9,6 +9,7 @@ import {
   sonnyVerlossing,
   martijnVerlossing,
   marijnVerlossing,
+  result,
 } from "../helpers/dates.js";
 import { capFirstLetter } from "../helpers/capFirstLetter.js";
 
@@ -150,7 +151,7 @@ client.on("interactionCreate", (interaction) => {
           break;
         case (inputName = "now"):
           interaction.reply({
-            content: `${new Date()}`,
+            content: `${result}`,
           });
           break;
       }
