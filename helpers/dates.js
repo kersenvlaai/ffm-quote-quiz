@@ -1,16 +1,12 @@
-import { differenceInHours, subDays } from "date-fns";
+import { differenceInHours } from "date-fns";
 
-export const sonnyVerlossing = differenceInHours(
-  new Date(2022, 12, 31, 0, 0),
-  new Date(Date.now())
-);
+const startDate = new Date();
+const sonnyEndDate = new Date(2022, 12, 31);
+const martijnEndDate = new Date(2022, 12, 9);
+const marijnEndDate = new Date(2023, 8, 15);
 
-export const martijnVerlossing = differenceInHours(
-  new Date(2022, 12, 9, 0, 0),
-  new Date(Date.now())
-);
+export const sonnyVerlossing = differenceInHours(sonnyEndDate, startDate);
 
-export const marijnVerlossing = differenceInHours(
-  new Date(2023, 8, 15, 0, 0),
-  new Date(Date.now())
-);
+export const martijnVerlossing = differenceInHours(martijnEndDate, startDate);
+
+export const marijnVerlossing = differenceInHours(marijnEndDate, startDate);
