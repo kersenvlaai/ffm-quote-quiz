@@ -149,11 +149,6 @@ client.on("interactionCreate", (interaction) => {
             )}, nog ${marijnVerlossing} uren`,
           });
           break;
-        case (inputName = "now"):
-          interaction.reply({
-            content: `${result}`,
-          });
-          break;
       }
     }
   }
