@@ -1,7 +1,7 @@
-import { differenceInHours, addDays } from "date-fns";
+import { differenceInHours, subDays } from "date-fns";
 // import { DateTime } from "luxon";
 
-const today = addDays(new Date(), 31);
+const today = subDays(new Date(), 31);
 
 export const sonnyVerlossing = differenceInHours(
   new Date(2022, 12, 31, 0, 0),
@@ -18,4 +18,4 @@ export const marijnVerlossing = differenceInHours(
   today
 );
 
-export const result = differenceInHours(new Date());
+// export const result = differenceInHours(new Date());
