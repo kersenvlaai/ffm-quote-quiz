@@ -129,23 +129,23 @@ client.on("interactionCreate", (interaction) => {
       switch (inputName) {
         case (inputName = "sonny"):
           interaction.reply({
-            content: `Hou vol ${capFirstLetter(
-              inputName
-            )}: Nog ${sonnyVerlossing} uren`,
+            content: `Hou vol ${capFirstLetter(inputName)}: Nog ${
+              sonnyVerlossing < 0 ? 0 : sonnyVerlossing
+            } uren`,
           });
           break;
         case (inputName = "martijn"):
           interaction.reply({
-            content: `Hou vol ${capFirstLetter(
-              inputName
-            )}, nog ${martijnVerlossing} uren`,
+            content: `Hou vol ${capFirstLetter(inputName)}, nog ${
+              martijnVerlossing < 0 ? 0 : martijnVerlossing
+            } uren`,
           });
           break;
         case (inputName = "marijn"):
           interaction.reply({
-            content: `Hou vol ${capFirstLetter(
-              inputName
-            )}, nog ${marijnVerlossing} uren`,
+            content: `Hou vol ${capFirstLetter(inputName)}, nog ${
+              marijnVerlossing < 0 ? 0 : marijnVerlossing
+            } uren`,
           });
           break;
       }
